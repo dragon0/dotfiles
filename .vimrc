@@ -11,6 +11,8 @@ set hidden
 set background=dark
 com W w|make
 
+"set makeprg=mingw32-make
+
 map <F1> <nop>
 imap <F1> <nop>
 
