@@ -50,6 +50,8 @@ if has("autocmd")
   autocmd Filetype java setlocal omnifunc=javacomplete#Complete
   autocmd Filetype java setlocal makeprg=./gradlew\ -q
   autocmd Filetype python setlocal makeprg=%:p
+  autocmd Filetype python map <buffer> <F2> :set makeprg=python\ \"%\"<Return>:make<Return>
+  autocmd Filetype python map <buffer> <F3> :set makeprg=python3\ \"%\"<Return>:make<Return>
   autocmd Filetype lilypond setlocal makeprg=lilypond\ %
   autocmd Filetype html setlocal shiftwidth=2
   autocmd Filetype xml setlocal shiftwidth=2
