@@ -10,6 +10,7 @@ set nrformats-=octal
 set hidden
 set background=dark
 com W w|make
+let g:netrw_liststyle=3
 
 "set makeprg=mingw32-make
 
