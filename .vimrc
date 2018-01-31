@@ -9,10 +9,26 @@ set softtabstop=4
 set nrformats-=octal
 set hidden
 set background=dark
+set backspace=indent,eol,start
 com W w|make
 let g:netrw_liststyle=3
 
-"set makeprg=mingw32-make
+
+" detect make program
+if !empty(glob("gradlew"))
+    set makeprg=./gradlew\ -q
+elseif !empty(glob("build.gradle"))
+    set makeprg=gradle\ -q
+elseif !empty(glob("pom.xml"))
+    set makeprg=mvn
+elseif !empty(glob("build.xml"))
+    set makeprg=ant
+elseif !empty(glob("package.json"))
+    set makeprg=npm
+elseif has("win32")
+    set makeprg=mingw32-make
+endif
+
 
 map <F1> <nop>
 imap <F1> <nop>
