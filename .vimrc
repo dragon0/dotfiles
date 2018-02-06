@@ -76,6 +76,8 @@ if has("autocmd")
   autocmd Filetype markdown setlocal spell spelllang=en_us
   autocmd Filetype html setlocal spell spelllang=en_us
   autocmd Filetype liquid setlocal spell spelllang=en_us
+  "https://stackoverflow.com/a/26254386
+  "autocmd FileType json autocmd BufWritePre <buffer> %!python -m json.tool 2>/dev/null || echo <buffer>
 endif
 
 "filetype off
