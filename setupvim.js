@@ -1,4 +1,8 @@
 // WSH script to download my .g?vimrc
+/*
+curl https://raw.githubusercontent.com/dragon0/dotfiles/master/setupvim.js -o setupvim.js
+cscript setupvim.js
+*/
 var shell = WScript.CreateObject("WScript.Shell");
 var profile = shell.ExpandEnvironmentStrings("%USERPROFILE%");
 shell.CurrentDirectory = profile;
