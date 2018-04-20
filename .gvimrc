@@ -13,6 +13,6 @@ highlight Normal guibg=Black guifg=White
 if &diff
     set lines=999 columns=999
 else
-    set lines=48
+    set lines=48 columns=80
 endif
 
