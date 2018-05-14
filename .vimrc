@@ -10,6 +10,7 @@ set nrformats-=octal
 set hidden
 set background=dark
 set backspace=indent,eol,start
+set diffopt+=iwhite
 com W w|make
 let g:netrw_liststyle=3
 
