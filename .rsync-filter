@@ -1,0 +1,16 @@
++ .bash*
++ .config
++ .Curvy_Herbs
++ .doom3
++ .git*
++ .kde
++ .local
++ .mozilla
++ .profile
++ .rsync-filter
++ .thunderbird
++ .*vimrc
++ .vim*
+- node_modules
+- .*
+

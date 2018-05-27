@@ -1,0 +1,25 @@
+#!/bin/bash
+BACKUP_BASE="/media/sean/Backup"
+BACKUP_TARGET="AcerLinux"
+BACKUP_COMPARE="HPDebian"
+#".backup"
+LOGFILE=".rsync-log"
+#OPTIONS="-a --no-perms --no-links --no-whole-file -F --log-file=$LOGFILE"
+OPTIONS="-a --no-perms --no-links -F --log-file=$LOGFILE"
+OPTIONS="$OPTIONS --compare-dest=$BACKUP_BASE/$BACKUP_COMPARE"
+
+# Notes for future improvement:
+# - Use $(date) to determine BACKUP_TARGET and BACKUP_COMPARE
+# - Use optional/multiple --compare-dest or --copy-dest to do full/incremental backups
+# - Use --link-dest to do full+incremental backup
+
+if [ ! -e $BACKUP_BASE ]
+then
+    mkdir -p $BACKUP_BASE
+fi
+
+strt=$(date "+Started : %F %T")
+rsync $OPTIONS . "$BACKUP_BASE/$BACKUP_TARGET"
+echo $strt
+date "+Finished: %F %T"
+
