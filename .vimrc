@@ -86,3 +86,22 @@ endif
 "set runtimepath+=/usr/share/vim-conque/
 "filetype on
 
+" Based on https://github.com/benmills/vimux
+command -nargs=1 Tmux :call Tmux(<q-args>)
+command -nargs=* Tmake :execute ':Tmux ' . &g:makeprg . ' ' . <q-args>
+command -nargs=? TmuxSession :call TmuxSetSession(<args>)
+map <F5> :wall\|Tmake<Return>
+
+function Tmux(args)
+    if !exists("g:TmuxSession")
+        let g:TmuxSession="dev:0.0"
+    endif
+    let l:args = '"'.escape(a:args, '\"$`').'"'
+    call system("tmux send-keys -t " . g:TmuxSession . " " . l:args . " Enter")
+endfunction
+
+function TmuxSetSession(...)
+    let sess = a:0 == 1 ? a:1 : ""
+    let g:TmuxSession = input("Session? ", sess)
+endfunction
+
