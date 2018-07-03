@@ -11,17 +11,21 @@ set hidden
 set background=dark
 set backspace=indent,eol,start
 set diffopt+=iwhite
+set errorformat=[error]\ %f:%l:%c:\ %m,%f:%l:%c:\ %m,%f:%l:\ %m,In\ file\ included\ from\ %f:%l:,\^I\^Ifrom\ %f:%l%m
+
 com W w|make
 let g:netrw_liststyle=3
 
 
 " detect make program
 if !empty(glob("gradlew"))
-    set makeprg=./gradlew\ -q
+    set makeprg=./gradlew\ --console\ plain
 elseif !empty(glob("build.gradle"))
     set makeprg=gradle\ -q
 elseif !empty(glob("pom.xml"))
     set makeprg=mvn
+elseif !empty(glob("build.sbt"))
+    set makeprg=sbt
 elseif !empty(glob("build.xml"))
     set makeprg=ant
 elseif !empty(glob("package.json"))
@@ -29,7 +33,6 @@ elseif !empty(glob("package.json"))
 elseif has("win32")
     set makeprg=mingw32-make
 endif
-
 
 map <F1> <nop>
 imap <F1> <nop>
@@ -66,7 +69,7 @@ if has("autocmd")
   autocmd BufRead,BufNewFile build.gradle set filetype=groovy
   autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-  autocmd Filetype java setlocal makeprg=./gradlew\ -q
+  "autocmd Filetype java setlocal makeprg=./gradlew\ -q
   autocmd Filetype python setlocal makeprg=%:p
   autocmd Filetype python map <buffer> <F2> :set makeprg=python\ \"%\"<Return>:make<Return>
   autocmd Filetype python map <buffer> <F3> :set makeprg=python3\ \"%\"<Return>:make<Return>
