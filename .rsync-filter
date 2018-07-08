@@ -3,12 +3,14 @@
 + .Curvy_Herbs
 + .doom3
 + .git*
++ .icedove
 + .kde
 + .local
 + .mozilla
 + .profile
 + .rsync-filter
 + .thunderbird
++ .tmux.conf
 + .*vimrc
 + .vim*
 - node_modules
