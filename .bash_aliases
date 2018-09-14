@@ -56,7 +56,7 @@ export LEOCAD_LIB='~/Downloads/LeoCAD-Library-Linux-8750.zip'
 ################################################################
 # Program-Specific Configurations
 
-eval "$(stack --bash-completion-script stack)"
+type stack >/dev/null 2>&1 && eval "$(stack --bash-completion-script stack)"
 
 # OPAM configuration
 . /home/sean/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
