@@ -18,6 +18,8 @@ xterm*|rxvt*|screen)
     ;;
 esac
 
+[[ -z "${VIRTUAL_ENV}" ]] || PS1="\[\033[01;34m\]\$(basename '$VIRTUAL_ENV')\[\e[0m\] $PS1"
+
 ################################################################
 # Path
 if [ -d "$HOME/bin" ] ; then
