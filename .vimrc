@@ -66,6 +66,7 @@ filetype plugin indent on
 if has("autocmd")
   autocmd BufRead,BufNewFile ~/SaddlebackCSS/SaddlebackCSS.github.io/*.md let b:liquid_subtype = 'markdown' | set filetype=liquid
   autocmd BufRead,BufNewFile ~/SaddlebackCSS/SaddlebackCSS.github.io/*.html let b:liquid_subtype = 'html' | set filetype=liquid
+  autocmd BufRead,BufNewFile *.vue set filetype=html
   autocmd BufRead,BufNewFile build.gradle set filetype=groovy
   autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   autocmd Filetype java setlocal omnifunc=javacomplete#Complete
