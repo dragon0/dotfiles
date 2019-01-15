@@ -37,6 +37,7 @@ fi
 
 alias info='pinfo'
 alias mkdir='mkdir -p'
+alias rm='rm -Iv'
 #alias venv='python3 -m virtualenv -p python3'
 
 ################################################################
