@@ -70,6 +70,8 @@ if has("autocmd")
   autocmd BufRead,BufNewFile ~/SaddlebackCSS/SaddlebackCSS.github.io/*.html let b:liquid_subtype = 'html' | set filetype=liquid
   autocmd BufRead,BufNewFile *.vue set filetype=html
   autocmd BufRead,BufNewFile build.gradle set filetype=groovy
+  "FIXME why didn't the modeline read this?
+  autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
   autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   autocmd Filetype java setlocal omnifunc=javacomplete#Complete
   "autocmd Filetype java setlocal makeprg=./gradlew\ -q
