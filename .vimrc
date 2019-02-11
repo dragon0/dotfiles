@@ -28,6 +28,8 @@ elseif !empty(glob("build.sbt"))
     set makeprg=sbt
 elseif !empty(glob("build.xml"))
     set makeprg=ant
+elseif !empty(glob("Cargo.toml"))
+    set makeprg=cargo
 elseif !empty(glob("package.json"))
     set makeprg=npm
 elseif has("win32")
