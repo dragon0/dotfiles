@@ -60,6 +60,10 @@ set colorcolumn=80
 " set background and text colors
 " highlight Normal ctermbg=White ctermfg=Black
 
+filetype off
+set runtimepath+=/usr/share/lilypond/2.18.2/vim/
+"set runtimepath+=/usr/share/vim-conque/
+
 syntax on
 filetype plugin indent on
 "filetype indent on
@@ -88,11 +92,6 @@ if has("autocmd")
   "https://stackoverflow.com/a/26254386
   "autocmd FileType json autocmd BufWritePre <buffer> %!python -m json.tool 2>/dev/null || echo <buffer>
 endif
-
-"filetype off
-"set runtimepath+=/usr/share/lilypond/2.18.2/vim/
-"set runtimepath+=/usr/share/vim-conque/
-"filetype on
 
 " Based on https://github.com/benmills/vimux
 command -nargs=1 Tmux :call Tmux(<q-args>)
