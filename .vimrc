@@ -60,8 +60,8 @@ set colorcolumn=80
 " set background and text colors
 " highlight Normal ctermbg=White ctermfg=Black
 
-filetype off
-set runtimepath+=/usr/share/lilypond/2.18.2/vim/
+"filetype off
+"set runtimepath+=/usr/share/lilypond/2.18.2/vim/
 "set runtimepath+=/usr/share/vim-conque/
 
 syntax on
@@ -101,7 +101,7 @@ map <F5> :wall\|Tmake<Return>
 
 function Tmux(args)
     if !exists("g:TmuxSession")
-        let g:TmuxSession="dev:0.0"
+        let g:TmuxSession=$TMUX_PANE
     endif
     let l:args = '"'.escape(a:args, '\"$`').'"'
     call system("tmux send-keys -t " . g:TmuxSession . " " . l:args . " Enter")
