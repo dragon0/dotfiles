@@ -55,6 +55,7 @@ export DOOMWADDIR='/home/sean/wads'
 #export CLASSPATH='.:/usr/share/java/*'
 #export PYTHONPATH='/home/sean/PyProjects/'
 export LEOCAD_LIB='~/Downloads/LeoCAD-Library-Linux-8750.zip'
+export LC_COLLATE=C
 
 ################################################################
 # Program-Specific Configurations
