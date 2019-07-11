@@ -1,18 +1,18 @@
-set directory=~/.swp
-set modeline
-set ruler
-set showcmd
-set expandtab
 set autoindent
-set shiftwidth=4
-set softtabstop=4
-set nrformats-=octal
-set hlsearch
-set hidden
 set background=dark
 set backspace=indent,eol,start
 set diffopt+=iwhite
+set directory=~/.swp
 set errorformat=[error]\ %f:%l:%c:\ %m,%f:%l:%c:\ %m,%f:%l:\ %m,In\ file\ included\ from\ %f:%l:,\^I\^Ifrom\ %f:%l%m
+set expandtab
+set hidden
+set hlsearch
+set modeline
+set nrformats-=octal
+set ruler
+set shiftwidth=4
+set showcmd
+set softtabstop=4
 
 com W w|make
 let g:netrw_liststyle=3
