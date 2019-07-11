@@ -7,6 +7,7 @@ set autoindent
 set shiftwidth=4
 set softtabstop=4
 set nrformats-=octal
+set hlsearch
 set hidden
 set background=dark
 set backspace=indent,eol,start
@@ -52,6 +53,8 @@ inoremap (<CR> ()<Left><CR><Up><End><CR>
 inoremap [<CR> []<Left><CR><Up><End><CR>
 inoremap {<CR> {}<Left><CR><Up><End><CR>
 inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
+
+map <Leader>h :nohls<Return>
 
 " show line numbers and 80th column
 "set number
