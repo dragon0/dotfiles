@@ -71,8 +71,12 @@ export LC_COLLATE=C
 ################################################################
 # Program-Specific Configurations
 
+# haskellstack configuration
 type stack >/dev/null 2>&1 && eval "$(stack --bash-completion-script stack)"
 
 # OPAM configuration
 . /home/sean/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+# cargo configuration
+test -e "$HOME/.cargo/env" && source "$HOME/.cargo/env"
 
