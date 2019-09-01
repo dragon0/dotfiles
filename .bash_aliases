@@ -51,6 +51,8 @@ alias info='pinfo'
 alias rm='rm -Iv'
 #alias venv='python3 -m virtualenv -p python3'
 
+alias drun='docker run -it --rm -u 1000:1000 -v "$(pwd):/app" -w /app'
+
 ################################################################
 # Shell options
 
