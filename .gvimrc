@@ -16,3 +16,8 @@ else
     set lines=48 columns=80
 endif
 
+if has("autocmd")
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | set columns=120 | endif
+endif
+

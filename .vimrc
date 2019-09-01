@@ -55,6 +55,7 @@ inoremap {<CR> {}<Left><CR><Up><End><CR>
 inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
 
 map <Leader>h :nohls<Return>
+map <Leader>n :NERDTreeToggle<CR>
 
 " show line numbers and 80th column
 "set number
@@ -73,6 +74,9 @@ filetype plugin indent on
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | wincmd p | exe 'cd '.argv()[0] | endif
+
   autocmd BufRead,BufNewFile ~/SaddlebackCSS/SaddlebackCSS.github.io/*.md let b:liquid_subtype = 'markdown' | set filetype=liquid
   autocmd BufRead,BufNewFile ~/SaddlebackCSS/SaddlebackCSS.github.io/*.html let b:liquid_subtype = 'html' | set filetype=liquid
   autocmd BufRead,BufNewFile *.vue set filetype=html
