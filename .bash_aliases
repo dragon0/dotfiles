@@ -82,3 +82,9 @@ type stack >/dev/null 2>&1 && eval "$(stack --bash-completion-script stack)"
 # cargo configuration
 test -e "$HOME/.cargo/env" && source "$HOME/.cargo/env"
 
+# pyenv configuration
+export PATH="/home/sean/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
