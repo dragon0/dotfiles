@@ -2,6 +2,10 @@
 
 ################################################################
 # Prompt
+pslen=$(expr length "$PS1" - 3)
+pssub=${PS1:0:$pslen}
+PS1="$pssub\n$ "
+
 [[ -z "${VIRTUAL_ENV}" ]] || PS1="\[\033[01;34m\]\$(basename '$VIRTUAL_ENV')\[\e[0m\] $PS1"
 
 ################################################################
@@ -57,7 +61,6 @@ test -e "$HOME/.cargo/env" && source "$HOME/.cargo/env"
 
 # pyenv configuration
 export PATH="/home/sean/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+type pyenv > /dev/null 2>&1 && ( eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)")
 
 
