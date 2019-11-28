@@ -16,3 +16,6 @@
 [submodule "vim/pack/maven/start/Maven-Compiler"]
 	path = vim/pack/maven/start/Maven-Compiler
 	url = https://github.com/vim-scripts/Maven-Compiler
+[submodule "vim/pack/scala/start/scala"]
+	path = vim/pack/scala/start/scala
+	url = https://github.com/derekwyatt/vim-scala
