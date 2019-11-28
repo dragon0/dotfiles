@@ -20,17 +20,17 @@ let g:netrw_liststyle=3
 
 " detect make program
 if !empty(glob("gradlew"))
-    set makeprg=./gradlew\ --console\ plain
+    compiler gradlew
 elseif !empty(glob("build.gradle"))
-    set makeprg=gradle\ -q
+    compiler gradle
 elseif !empty(glob("pom.xml"))
-    set makeprg=mvn
+    compiler mvn
 elseif !empty(glob("build.sbt"))
-    set makeprg=sbt
+    compiler sbt
 elseif !empty(glob("build.xml"))
-    set makeprg=ant
+    compiler ant
 elseif !empty(glob("Cargo.toml"))
-    set makeprg=cargo
+    compiler cargo
 elseif !empty(glob("package.json"))
     set makeprg=npm
 elseif has("win32")
