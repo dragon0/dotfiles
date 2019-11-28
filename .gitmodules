@@ -7,3 +7,6 @@
 [submodule "vim/pack/nerdtree/start/nerdtree"]
 	path = vim/pack/nerdtree/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/pack/elm/start/elm"]
+	path = vim/pack/elm/start/elm
+	url = https://github.com/ElmCast/elm-vim.git
