@@ -10,3 +10,6 @@
 [submodule "vim/pack/elm/start/elm"]
 	path = vim/pack/elm/start/elm
 	url = https://github.com/ElmCast/elm-vim.git
+[submodule "vim/pack/gradle/start/gradle"]
+	path = vim/pack/gradle/start/gradle
+	url = https://github.com/tfnico/vim-gradle
