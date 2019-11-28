@@ -13,3 +13,6 @@
 [submodule "vim/pack/gradle/start/gradle"]
 	path = vim/pack/gradle/start/gradle
 	url = https://github.com/tfnico/vim-gradle
+[submodule "vim/pack/maven/start/Maven-Compiler"]
+	path = vim/pack/maven/start/Maven-Compiler
+	url = https://github.com/vim-scripts/Maven-Compiler
