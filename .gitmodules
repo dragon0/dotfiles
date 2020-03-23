@@ -19,3 +19,6 @@
 [submodule "vim/pack/scala/start/scala"]
 	path = vim/pack/scala/start/scala
 	url = https://github.com/derekwyatt/vim-scala
+[submodule "vim/pack/tsx/start/tsx"]
+	path = vim/pack/tsx/start/tsx
+	url = https://github.com/ianks/vim-tsx
