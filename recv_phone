@@ -1,9 +1,10 @@
 #!/bin/sh
 while true
 do
-    url=$(curl 192.168.0.44:8080)
+    url=$(curl --silent 192.168.0.44:8080)
     if [ -n "$url" -a "$url" != "$oldurl" ]
     then
+        echo $url
         firefox $url
         oldurl=$url
     fi
