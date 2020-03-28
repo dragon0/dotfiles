@@ -79,6 +79,18 @@ export LEOCAD_LIB='~/Downloads/LeoCAD-Library-Linux-8750.zip'
 export LC_COLLATE=C
 
 ################################################################
+# Customizations
+
+function doit {
+    until "$@"
+    do
+        echo ========
+        echo retrying
+        echo
+    done
+}
+
+################################################################
 # Program-Specific Configurations
 
 # haskellstack configuration
