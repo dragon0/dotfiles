@@ -104,7 +104,11 @@ test -e "$HOME/.cargo/env" && source "$HOME/.cargo/env"
 
 # pyenv configuration
 export PATH="/home/sean/.pyenv/bin:$PATH"
-type pyenv > /dev/null 2>&1 && ( eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)")
+if type pyenv > /dev/null 2>&1 
+then
+     eval "$(pyenv init -)"
+     eval "$(pyenv virtualenv-init -)"
+fi
 
 
 # nvm/nodejs
