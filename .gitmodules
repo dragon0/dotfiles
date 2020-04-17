@@ -22,3 +22,6 @@
 [submodule "vim/pack/tsx/start/tsx"]
 	path = vim/pack/tsx/start/tsx
 	url = https://github.com/ianks/vim-tsx
+[submodule "vim/pack/eunuch/start/vim-eunuch"]
+	path = vim/pack/eunuch/start/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
