@@ -36,6 +36,7 @@ inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\
 
 map <Leader>h :nohls<Return>
 map <Leader>n :NERDTreeToggle<CR>
+map <Leader>f :NERDTreeFind<CR>
 
 " show line numbers and 80th column
 "set number
