@@ -1,6 +1,8 @@
 set autoindent
 set background=dark
 set backspace=indent,eol,start
+set cursorcolumn
+set cursorline
 set diffopt+=iwhite
 set directory=~/.swp
 set errorformat=[error]\ %f:%l:%c:\ %m,%f:%l:%c:\ %m,%f:%l:\ %m,In\ file\ included\ from\ %f:%l:,\^I\^Ifrom\ %f:%l%m
