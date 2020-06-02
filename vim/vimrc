@@ -9,9 +9,11 @@ set errorformat=[error]\ %f:%l:%c:\ %m,%f:%l:%c:\ %m,%f:%l:\ %m,In\ file\ includ
 set expandtab
 set hidden
 set hlsearch
+set linebreak
 set modeline
 set nrformats-=octal
 set ruler
+set scrolloff=4
 set shiftwidth=4
 set showcmd
 set softtabstop=4
