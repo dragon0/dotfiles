@@ -13,7 +13,7 @@ set linebreak
 set modeline
 set nrformats-=octal
 set ruler
-set scrolloff=4
+set scrolloff=2
 set shiftwidth=4
 set showcmd
 set softtabstop=4
