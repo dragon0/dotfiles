@@ -28,3 +28,6 @@
 [submodule "vim/pack/editorconfig/start/editorconfig-vim"]
 	path = vim/pack/editorconfig/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "vim/pack/ctrlp/start/ctrlp"]
+	path = vim/pack/ctrlp/start/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim
