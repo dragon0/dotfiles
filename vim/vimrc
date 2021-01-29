@@ -17,6 +17,7 @@ set scrolloff=2
 set shiftwidth=4
 set showcmd
 set softtabstop=4
+set spell spelllang=en_us
 
 com W w|make
 let g:netrw_liststyle=3
