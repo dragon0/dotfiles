@@ -22,6 +22,8 @@ set spell spelllang=en_us
 com W w|make
 let g:netrw_liststyle=3
 
+let g:ctrlp_extensions = ['tag']
+
 map <F1> <nop>
 imap <F1> <nop>
 
