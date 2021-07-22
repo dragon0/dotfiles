@@ -126,3 +126,7 @@ if [ -f '/home/sean/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/sean/.sdkman"
 [[ -s "/home/sean/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sean/.sdkman/bin/sdkman-init.sh"
+
+# Angular CLI
+alias ng="npx -p @angular/cli ng"
+
