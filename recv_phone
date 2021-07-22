@@ -1,11 +1,11 @@
 #!/bin/sh
 while true
 do
-    url=$(curl --silent 192.168.0.44:8080)
+    url=$(curl --connect-timeout 1 --silent 192.168.0.44:8080)
     if [ -n "$url" -a "$url" != "$oldurl" ]
     then
         echo $url
-        firefox $url
+        #firefox $url
         oldurl=$url
     fi
     sleep 1
