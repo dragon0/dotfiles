@@ -46,3 +46,6 @@
 [submodule "vim/pack/lsp/start/asyncomplete-lsp"]
 	path = vim/pack/lsp/start/asyncomplete-lsp
 	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim
+[submodule "vim/pack/terminal/start/neoterm"]
+	path = vim/pack/terminal/start/neoterm
+	url = https://github.com/kassio/neoterm
